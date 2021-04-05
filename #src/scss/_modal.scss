@@ -1,0 +1,142 @@
+.modal-call {
+	display: none;
+	max-width: 530px;
+	width: 100%;
+	padding: 95px 0px 76px 0px;
+	@media (max-width: 420px) {
+		padding-top: 80px;
+		padding-bottom: 60px;
+	}
+	// .modal-call__close
+	&__close {
+	}
+	// .modal-call__container
+	&__container {
+		max-width: 410px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+	// .modal-call__title
+	&__title {
+		font-family: "Bodoni";
+		margin-bottom: 65px;
+		font-weight: 700;
+		font-size: 33px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #000;
+		@media (max-width: 768px) {
+			@include adaptiv(font-size, 33, 24, 768, 320);
+			@include adaptiv(margin-bottom, 65, 30, 768, 320);
+		}
+	}
+	// .modal-call__privacy
+	&__privacy {
+		font-size: 13px;
+		line-height: 1.25;
+		color: #9a9a9a;
+		@media (max-width: 420px) {
+			font-size: 12px;
+		}
+		@media (max-width: 370px) {
+			font-size: 11px;
+		}
+		span {
+			position: relative;
+			text-decoration: underline;
+			cursor: pointer;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.wpcf7 {
+		margin-bottom: 30px;
+		@media (max-width: 420px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	.wpcf7-form {
+		display: flex;
+		flex-direction: column;
+	}
+	.wpcf7-form-control-wrap {
+		margin-bottom: 20px;
+		@media (max-width: 420px) {
+			margin-bottom: 15px;
+		}
+		input {
+			width: 100%;
+			height: 60px;
+			padding: 10px 20px;
+			font-size: 20px;
+			color: #000000;
+			background: #ffffff;
+			border: 1px solid #dbdbdb;
+			@media (max-width: 768px) {
+				font-size: 18px;
+			}
+			@media (max-width: 500px) {
+				height: 50px;
+				font-size: 16px;
+			}
+			@media (max-width: 420px) {
+				padding: 10px 15px;
+			}
+		}
+	}
+
+	.wpcf7-submit {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px 15px;
+		min-height: 65px;
+		background: #03a34b;
+		border-radius: 50px;
+		font-size: 20px;
+		line-height: lh(29, 20);
+		text-align: center;
+		color: #ffffff;
+		transition: background-color 0.3s;
+		@media (max-width: 500px) {
+			min-height: 55px;
+			font-size: 18px;
+		}
+		@media (max-width: 420px) {
+			min-height: 50px;
+			font-size: 16px;
+		}
+		&:hover {
+			background: #01873d;
+		}
+	}
+
+	.wpcf7-form-control {
+	}
+}
+
+.close-modal {
+	position: absolute;
+	width: 23px;
+	height: 23px;
+	top: 14px;
+	right: 14px;
+	background: transparent;
+	cursor: pointer;
+	&:hover {
+		svg path {
+			fill: #03a34b;
+		}
+	}
+
+	svg {
+		width: 100%;
+		height: 100%;
+		path {
+			transition: 0.3s;
+		}
+	}
+}
