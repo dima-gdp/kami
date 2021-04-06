@@ -3,7 +3,7 @@ $(document).ready(function () {
 	objectFitImages();
 
 	const slidersTabs = document.querySelectorAll('.tabs-materials__slider');
-	console.log(slidersTabs)
+
 
 	slidersTabs.forEach(function (el) {
 
@@ -164,17 +164,17 @@ $(document).ready(function () {
 
 	// Fancy-box
 
-	// $('[data-src="#modal-polit"]').fancybox({
-	// 	touch: 'false',
-	// 	smallBtn: false,
-	// 	buttons: '',
-	// });
+	$('[data-src="#modal-polit"]').fancybox({
+		touch: 'false',
+		smallBtn: false,
+		buttons: '',
+	});
 
-	// $('[data-src="#home-modal"]').fancybox({
-	// 	touch: 'false',
-	// 	smallBtn: false,
-	// 	buttons: '',
-	// });
+	$('[data-src="#modal-call"]').fancybox({
+		touch: 'false',
+		smallBtn: false,
+		buttons: '',
+	});
 
 	// $('[data-fancybox="gal"]').fancybox({
 	// backFocus: false,
@@ -185,23 +185,27 @@ $(document).ready(function () {
 	// Input-mask
 	// $('input[type="tel"]').inputmask({ "mask": "+7 (999)-999-99-99" });
 
-
-
-
+	const mobMenu = $('.menu')
+	const burger = $('.menu__btn')
 	// Menu-burger
-	// burger.click(function () {
-	// 	mobMenu.addClass('active')
-	// })
+	burger.click(function () {
+		mobMenu.toggleClass('active')
+	})
 
-	// $('.mob-menu__close').click(function () {
-	// 	mobMenu.removeClass('active')
-	// })
 
-	// $(document).click(function (ev) {
-	// 	if (!ev.target.closest('.header__burger') && !ev.target.closest('h1')) {
-	// 		mobMenu.removeClass('active')
-	// 	}
-	// })
+	$(document).click(function (ev) {
+		if (!ev.target.closest('.menu__btn')) {
+			mobMenu.removeClass('active')
+		}
+	})
+
+
+	$('.anchor').click(function (ev) {
+		let anchor = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(anchor).offset().top
+		}, 600);
+	});
 
 	// Яндекс карта
 	// ymaps.ready(function () {

@@ -1,0 +1,183 @@
+/* politica begin */
+.modal-container-polit {
+	max-width: 95%;
+	max-height: 95%;
+	width: 1000px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 36px 34px;
+	height: auto;
+	position: relative;
+	color: #333 !important;
+}
+.modal-block-polit {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+.caption_modal_new {
+	line-height: 16px;
+	font-size: 14px;
+	letter-spacing: -0.03em;
+	color: #616161;
+	margin-bottom: 34px;
+	max-width: 100%;
+	text-align: left;
+}
+.fancybox-content {
+	padding: 0 !important;
+}
+.modal-close-polit {
+	position: absolute;
+	top: 13px;
+	right: 13px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 34px;
+	height: 34px;
+	background-image: url(../img/krest-c.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	cursor: pointer;
+	border-radius: 100%;
+	z-index: 100;
+}
+
+.modal-close-polit:hover {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.modal-content-polit {
+	line-height: 22px;
+	padding: 15px;
+	cursor: pointer !important;
+}
+
+.title-modal-polit {
+	font-family: "Montserrat", sans-serif;
+	font-size: 32px;
+	line-height: 39px;
+	letter-spacing: -0.03em;
+	position: relative;
+}
+
+.caption-modal-polit ul,
+.caption-modal-polit ol {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.caption-modal-polit li {
+	background-size: auto;
+	background-position: 0 4px;
+	background-repeat: no-repeat;
+	background-image: url(../img/gal-li.png);
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 25px;
+	font-size: 14px;
+	line-height: 18px;
+}
+/* polit end */
+
+/* default modal */
+
+.modal_wrap {
+	display: flex;
+}
+.modal_box-img {
+	width: 190px;
+	background-image: url(../img/bg-benefits.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.modal_box-form {
+	background-color: white;
+	/*background: linear-gradient(-233deg, #711f1f, #432a2a 70.71%);*/
+	/* background-color: #711f1f; */
+	padding: 35px 30px;
+	text-align: center;
+	max-width: 360px;
+	width: 100%;
+}
+.modal_box-form .form_btn {
+	margin-bottom: 0;
+	width: 100%;
+}
+.modal_title {
+	font-size: 24px;
+	line-height: 26px;
+	margin-bottom: 12px;
+	letter-spacing: -0.03em;
+	font-weight: bold;
+	font-family: Montserrat, sans-serif;
+	text-align: left;
+	color: #333;
+}
+
+.tipov_modal .field {
+	border: 1px solid #a7a6a6;
+	color: #333;
+	max-width: 100%;
+}
+.tipov_modal .politica {
+	max-width: 100%;
+}
+.tipov_modal .fancybox-button svg {
+	filter: invert(100%);
+}
+
+/* default modal */
+/*contact form 7 start*/
+span.wpcf7-not-valid-tip,
+div.wpcf7 .ajax-loader,
+div.wpcf7-mail-sent-ok,
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing,
+div.wpcf7-response-output {
+	display: none !important;
+}
+.form-front .wpcf7-not-valid {
+	border: 1px solid #e52428 !important;
+	-webkit-box-shadow: inset 0 0 4px 1px #e52428;
+	box-shadow: inset 0 0 4px 1px #e52428;
+}
+
+.wpcf7-not-valid {
+	-webkit-box-shadow: 0 0 1px 1px #f34f41;
+	box-shadow: 0 0 1px 1px #f34f41;
+	border-color: #f34f41 !important;
+}
+.alertify-notifier .ajs-message.ajs-warning {
+	background: white;
+	-webkit-box-shadow: 0 0 3px #333333;
+	box-shadow: 0 0 3px #333333;
+}
+.alertify-notifier .ajs-message.ajs-success {
+	color: #fff;
+	background: rgba(40, 136, 62, 0.9);
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.alertify-notifier {
+	z-index: 99998 !important;
+}
+/*contact form 7 end*/

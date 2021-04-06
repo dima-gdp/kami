@@ -35,7 +35,7 @@
 
 <body>
 	<div class="wrapper">
-		@@include('svg-sprite.html')
+		<!-- @@include('svg-sprite.html') -->
 
 		@@include('modal-polit.html')
 		@@include('modal.html')
@@ -47,7 +47,7 @@
 					<a href="#" class="header__logo">
 						<img src="img/logo.png" alt="">
 					</a>
-					<div class="header__text">ВОЛОГОДСКИЕ ПЕЧНИКИ</div>
+					<div class="header__text" data-src="#modal-polit">ВОЛОГОДСКИЕ ПЕЧНИКИ</div>
 					<ul class="header__tels">
 						<li>
 							<a href="">8 (921) 126-22-25</a>
@@ -56,7 +56,7 @@
 							<a href="">8 (921) 126-22-25</a>
 						</li>
 					</ul>
-					<div class="header__modal">Заказать звонок</div>
+					<div class="header__modal" data-src="#modal-call">Заказать звонок</div>
 					<a href="" class="header__mail">KAMI@GMAIL.COM</a>
 					<div class="header__socials">
 						<a href="">
@@ -65,29 +65,69 @@
 						<a href="">
 							<img src="svg/instagram.svg" alt="">
 						</a>
+						<a href="">
+							<img src="svg/instagram.svg" alt="">
+						</a>
+						<a href="">
+							<img src="svg/instagram.svg" alt="">
+						</a>
 					</div>
-					<div class="header_menu">
-						<div class="btn-menu">
-							<span class="lateral"></span>
-							<span class="two"></span>
-							<span class="lateral2"></span>
-						</div>
-						<span class="header_menu-triger">Меню</span>
-						<div class="menu-box">
-							<a href="#elm1" class="menu-elements go_to">Элементы комплекса</a>
-							<a href="#elm2" class="menu-elements go_to">Услуги</a>
-							<a href="#elm3" class="menu-elements go_to">Материалы</a>
-							<a href="#elm4" class="menu-elements go_to">Примеры работ</a>
-							<a href="#elm6" class="menu-elements go_to">О нас</a>
-							<a href="#elm7" class="menu-elements go_to">Контакты</a>
-							<div class="menu_contact" style="display: none;">
-								<div class="header_number">
-									<a href="tel:8 (921) 126-22-25" class="header_tel">8 (921) 126-22-25</a>
-									<a href="mailto:kompleks-35@yandex.ru" class="header_email-new">kompleks-35@yandex.ru</a>
-								</div>
-
+					<div class="header__menu menu">
+						<button class="menu__btn">
+							<div class="burger">
+								<span></span>
+							</div>
+							<span class="menu__text">Меню</span>
+						</button>
+						<div class="menu__content">
+							<ul class="menu__nav">
+								<li>
+									<a href="#materials" class="anchor">Элементы комплекса</a>
+								</li>
+								<li>
+									<a href="#" class="anchor">Услуги</a>
+								</li>
+								<li>
+									<a href="#" class="anchor">Материалы</a>
+								</li>
+								<li>
+									<a href="#" class="anchor">Примеры работ</a>
+								</li>
+								<li>
+									<a href="#" class="anchor">О нас</a>
+								</li>
+								<li>
+									<a href="#" class="anchor">О нас</a>
+								</li>
+								<li>
+									<a href="#" class="anchor">Контакты</a>
+								</li>
+							</ul>
+							<ul class="menu__tels">
+								<li>
+									<a href="#">8 (921) 126-22-25</a>
+								</li>
+								<li>
+									<a href="#">8 (921) 126-22-25</a>
+								</li>
+							</ul>
+							<a href="#" class="menu__mail">KAMI@GMAIL.COM</a>
+							<div class="menu__socials">
+								<a href="#">
+									<img src="svg/vk.svg" alt="">
+								</a>
+								<a href="#">
+									<img src="svg/instagram.svg" alt="">
+								</a>
+								<a href="#">
+									<img src="svg/instagram.svg" alt="">
+								</a>
+								<a href="#">
+									<img src="svg/instagram.svg" alt="">
+								</a>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,137 @@
+.header {
+	// .header__menu
+	&__menu {
+	}
+}
+.menu {
+	position: relative;
+	// .menu__btn
+	&__btn {
+		display: flex;
+		background-color: transparent;
+		align-items: center;
+	}
+	// .menu__text
+	&__text {
+		margin-left: 10px;
+		font-weight: 700;
+		font-size: 16px;
+		color: #ffffff;
+		text-transform: uppercase;
+		line-height: 1;
+	}
+	// .menu__content
+	&__content {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: calc(100% + 20px);
+		left: 0;
+		padding: 10px;
+		width: 260px;
+		background-color: rgba(30, 40, 45, 0.95);
+		z-index: 100;
+		transition: 0.3s;
+		&.active {
+			display: block;
+		}
+		@media (max-width: 1650px) {
+			left: -172px;
+		}
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: -17px;
+			left: 38px;
+			border-left: 13px solid transparent;
+			border-right: 13px solid transparent;
+			border-bottom: 17px solid rgba(30, 40, 45, 0.7);
+			@media (max-width: 1650px) {
+				left: 208px;
+			}
+		}
+	}
+	// .menu__nav
+	&__nav {
+		margin-bottom: 15px;
+		a {
+			display: block;
+			font-size: 18px;
+			line-height: lh(24, 18);
+			color: #fff;
+			padding: 5px;
+			transition: 0.3s;
+			&:hover {
+				background-color: rgba(168, 36, 32, 0.8);
+			}
+		}
+	}
+	// .menu__tels
+	&__tels {
+		margin-bottom: 20px;
+		li {
+			&:not(:last-child) {
+				margin-bottom: 7px;
+			}
+		}
+		a {
+			font-size: 20px;
+			font-weight: 700;
+			color: #fff;
+			transition: 0.3s;
+			&:hover {
+				color: #a82420;
+			}
+		}
+	}
+	// .menu__mail
+	&__mail {
+		display: inline-block;
+		margin-bottom: 10px;
+		color: #fff;
+		transition: 0.3s;
+		&:hover {
+			color: #a82420;
+		}
+	}
+	// .menu__socials
+	&__socials {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-left: -8px;
+		margin-right: -8px;
+		a {
+			margin: 4px 8px 4px 8px;
+			img {
+				max-width: 19px;
+				max-height: 22px;
+				filter: brightness(0) invert(1);
+				transition: 0.3s;
+				&:hover {
+					filter: none;
+				}
+			}
+		}
+	}
+	&.active {
+		.burger {
+			span {
+				transform: scale(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+		.menu__content {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

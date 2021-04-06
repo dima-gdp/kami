@@ -65,6 +65,10 @@ body {
 	width: 44px;
 	height: 44px;
 	border-radius: 100%;
+	transition: 0.3s;
+	&:hover {
+		background-color: #d74f4b;
+	}
 }
 
 .arrow-left {
@@ -121,6 +125,10 @@ input[type="submit"] {
 }
 [data-src="#modal"] {
 	cursor: pointer;
+}
+
+.swiper-button-disabled {
+	background-color: rgba(196, 196, 196, 0.7) !important;
 }
 
 .title-block {

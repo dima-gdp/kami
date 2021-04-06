@@ -8,10 +8,18 @@
 	&__flex {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: 1070px) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	// .footer__logo
 	&__logo {
 		margin-bottom: 18px;
+		display: flex;
+		@media (max-width: 1070px) {
+			justify-content: center;
+		}
 		img {
 			max-height: 62px;
 			max-width: 113px;
@@ -26,11 +34,26 @@
 }
 
 .footer-left {
+	margin-right: 35px;
+	max-width: 260px;
+	@media (max-width: 1070px) {
+		max-width: none;
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
 }
+
 .adress {
 	font-size: 16px;
 	line-height: 1.62;
 	color: #000000;
+	@media (max-width: 1070px) {
+		display: flex;
+	}
+	@media (max-width: 649px) {
+		flex-direction: column;
+		text-align: center;
+	}
 	&:not(:last-child) {
 		margin-bottom: 5px;
 	}
@@ -39,9 +62,22 @@
 	}
 	// .adress__subtitle
 	&__subtitle {
+		@media (max-width: 1070px) {
+			margin-left: 3px;
+		}
+		@media (max-width: 649px) {
+			margin-left: 0px;
+		}
 	}
 }
 .footer-tels {
+	margin-right: 35px;
+	max-width: 150px;
+	@media (max-width: 1070px) {
+		max-width: none;
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
 	a {
 		font-family: "Montserrat";
 		font-weight: 700;
@@ -51,25 +87,43 @@
 	}
 }
 .footer-socials {
-	display: grid;
-	grid-template-columns: repeat(4, 26px);
-	grid-template-rows: 26px;
-	grid-column-gap: 30px;
-	grid-row-gap: 30px;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+	max-width: 209px;
+	@media (max-width: 1070px) {
+		max-width: 400px;
+		margin-bottom: 20px;
+	}
 	a {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin: 0px 15px 10px 15px;
+		filter: grayscale(90%) opacity(25%);
+		transition: 0.3s;
+		&:hover {
+			filter: none;
+		}
 		img {
 			max-height: 26px;
+			max-width: 26px;
 		}
 	}
 }
 .footer-right {
+	max-width: 248px;
+	margin-left: 35px;
 	font-family: "Montserrat";
 	font-size: 12px;
 	line-height: 2;
 	color: #333333;
+	@media (max-width: 1070px) {
+		margin-left: none;
+		text-align: center;
+		margin-left: 0;
+	}
 	p {
 		&:nth-child(2) {
 			margin-bottom: 20px;
@@ -78,4 +132,8 @@
 }
 .dev {
 	color: #000;
+	transition: 0.3s;
+	&:hover {
+		color: #d74f4b;
+	}
 }

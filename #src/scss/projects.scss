@@ -154,5 +154,9 @@
 		background-color: #a82420;
 		text-transform: uppercase;
 		cursor: pointer;
+		transition: 0.3s;
+		&:hover {
+			background: #d74f4b;
+		}
 	}
 }

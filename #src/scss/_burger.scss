@@ -1,17 +1,17 @@
 .burger {
 	display: block;
-	width: 40px;
-	height: 26px;
+	width: 20px;
+	height: 14px;
 	position: relative;
 	background-color: transparent;
 
-	&:hover {
-		span,
-		&::before,
-		&::after {
-			background-color: #358bee;
-		}
-	}
+	// &:hover {
+	// 	span,
+	// 	&::before,
+	// 	&::after {
+	// 		background-color: #fff;
+	// 	}
+	// }
 
 	&::before {
 		content: "";
@@ -20,7 +20,7 @@
 		top: 0;
 		width: 100%;
 		height: 2px;
-		background-color: #000;
+		background-color: #a82420;
 	}
 
 	&::after {
@@ -30,7 +30,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 2px;
-		background-color: #000;
+		background-color: #a82420;
 	}
 
 	span {
@@ -39,7 +39,7 @@
 		top: 50%;
 		width: 100%;
 		height: 2px;
-		background-color: #000;
+		background-color: #a82420;
 		transform: translateY(-50%);
 	}
 	&.active {
