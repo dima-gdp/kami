@@ -1,0 +1,58 @@
+.about {
+	padding-top: 89px;
+	padding-bottom: 83px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	// .about__container
+	&__container {
+	}
+	// .about__subcontainer
+	&__subcontainer {
+		max-width: 697px;
+		width: 100%;
+	}
+	// .about__title
+	&__title {
+		margin-bottom: 17px;
+		text-align: left;
+	}
+	// .about__content
+	&__content {
+		margin-bottom: 32px;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.62;
+		color: #ffffff;
+		p {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	// .about__grid
+	&__grid {
+		max-width: 533px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 154px;
+		grid-row-gap: 37px;
+	}
+	// .about__item
+	&__item {
+	}
+	// .about__key
+	&__key {
+		font-family: "Montserrat";
+		font-weight: 800;
+		font-size: 48px;
+		line-height: lh(59, 48);
+		color: #a82420;
+	}
+	// .about__value
+	&__value {
+		font-family: "Montserrat";
+		line-height: lh(20, 16);
+		color: #ffffff;
+	}
+}

@@ -57,6 +57,22 @@ body {
 	}
 }
 
+.arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #a82420;
+	width: 44px;
+	height: 44px;
+	border-radius: 100%;
+}
+
+.arrow-left {
+}
+.arrow-right {
+	transform: rotate(180deg);
+}
+
 .flex-help {
 	overflow: hidden !important;
 	visibility: hidden !important;
@@ -156,9 +172,11 @@ input[type="submit"] {
 	&__subtitle {
 		margin-top: 15px;
 		font-size: 16px;
-		line-height: lh(16, 19);
+		line-height: lh(19, 16);
 		text-align: center;
 		color: #616161;
+		position: relative;
+		z-index: 1;
 	}
 	// .title-block__bg
 	&__bg {
@@ -174,6 +192,12 @@ input[type="submit"] {
 		text-align: center;
 		text-transform: uppercase;
 		color: #f8f8f8;
+		&--wh {
+			color: #fff;
+		}
+		&--op {
+			color: rgba(248, 248, 248, 0.1);
+		}
 	}
 }
 

@@ -1,14 +1,119 @@
 $(document).ready(function () {
 
-	// objectFitImages();
+	objectFitImages();
+
+	const slidersTabs = document.querySelectorAll('.tabs-materials__slider');
+	console.log(slidersTabs)
+
+	slidersTabs.forEach(function (el) {
+
+		const slider_1 = new Swiper(el, {
+
+			slidesPerView: 4,
+			spaceBetween: 20,
+			observer: true,
+			observeParents: true,
+			observeSlideChildren: true,
+			loop: false,
+			navigation: {
+				nextEl: el.nextElementSibling.querySelector('.arrow-right'),
+				prevEl: el.nextElementSibling.querySelector('.arrow-left'),
+			},
+			pagination: {
+				el: el.nextElementSibling.querySelector('.control-tabs__pagination'),
+				type: 'bullets',
+			},
+			// breakpoints: {
+			// 	320: {
+			// 		slidesPerView: 1,
+			// 	},
+			// 	653: {
+			// 		slidesPerView: 2,
+			// 	},
+			// 	1130: {
+			// 		slidesPerView: 3,
+			// 	},
+			// 	1340: {
+			// 		slidesPerView: 4,
+			// 		spaceBetween: 30,
+			// 	}
+			// }
+		});
+	})
 
 	// Табы
-	// function tabs(buttonsList, wrapper, tabBlock) {
-	// 	$(buttonsList).on('click', 'li:not(.active)', function () {
-	// 		$(this).addClass('active').siblings().removeClass('active')
-	// 			.closest(wrapper).find(tabBlock).removeClass('active').eq($(this).index()).addClass('active');
-	// 	})
-	// }
+	function tabs(buttonsList, wrapper, tabBlock) {
+		$(buttonsList).on('click', 'li:not(.active)', function () {
+			$(this).addClass('active').siblings().removeClass('active')
+				.closest(wrapper).find(tabBlock).removeClass('active').eq($(this).index()).addClass('active');
+		})
+	}
+
+	tabs('.tabs-materials__buttons', '.tabs-materials', '.tabs-materials__block')
+
+
+	const chooseSlider = new Swiper('.choose__slider', {
+
+		slidesPerView: 4,
+		spaceBetween: 20,
+		observer: true,
+		observeParents: true,
+		observeSlideChildren: true,
+		loop: false,
+		navigation: {
+			nextEl: '.choose__right',
+			prevEl: '.choose__left',
+		},
+		pagination: {
+			el: '.choose__pagination',
+			type: 'bullets',
+		},
+		// breakpoints: {
+		// 	320: {
+		// 		slidesPerView: 1,
+		// 	},
+		// 	653: {
+		// 		slidesPerView: 2,
+		// 	},
+		// 	1130: {
+		// 		slidesPerView: 3,
+		// 	},
+		// 	1340: {
+		// 		slidesPerView: 4,
+		// 		spaceBetween: 30,
+		// 	}
+		// }
+	});
+
+
+	const projectSlider = new Swiper('.projects__slider', {
+
+		slidesPerView: 1,
+		spaceBetween: 40,
+		observer: true,
+		observeParents: true,
+		observeSlideChildren: true,
+		loop: false,
+		navigation: {
+			nextEl: '.projects__right',
+			prevEl: '.projects__left',
+		},
+		// breakpoints: {
+		// 	320: {
+		// 		slidesPerView: 1,
+		// 	},
+		// 	653: {
+		// 		slidesPerView: 2,
+		// 	},
+		// 	1130: {
+		// 		slidesPerView: 3,
+		// 	},
+		// 	1340: {
+		// 		slidesPerView: 4,
+		// 		spaceBetween: 30,
+		// 	}
+		// }
+	});
 
 	// function toggleTabs(top, bottom, topActive) {
 	// 	$(top).on('click', function (ev) {
