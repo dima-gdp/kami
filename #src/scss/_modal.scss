@@ -24,6 +24,9 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: 50% 50%;
+		@media (max-width: 589px) {
+			display: none;
+		}
 	}
 	&__form {
 		padding: 35px 30px;
@@ -65,6 +68,9 @@
 		background-size: 20px 21px;
 		background-position: 0 50%;
 		background-repeat: no-repeat;
+		@media (max-width: 374px) {
+			font-size: 10px;
+		}
 		span {
 			position: relative;
 			text-decoration: underline;
@@ -97,7 +103,8 @@
 			border: 1px solid #a7a6a6;
 			color: #333;
 			&:focus {
-				outline: 1px solid rgb(16, 16, 16);
+				border-radius: 4px;
+				border: 2px solid #e39b44;
 			}
 		}
 	}
@@ -120,6 +127,10 @@
 		text-transform: uppercase;
 		&:hover {
 			background-color: #d74f4b;
+		}
+		&:focus {
+			border-radius: 4px;
+			border: 2px solid #e39b44;
 		}
 	}
 

@@ -1,12 +1,24 @@
 .payment {
 	padding-top: 68px;
 	padding-bottom: 119px;
+	@media (max-width: 993px) {
+		@include adaptiv(padding-bottom, 119, 50, 993, 320);
+	}
+	@media (max-width: 420px) {
+		padding-top: 50px;
+	}
 	// .payment__container
 	&__container {
 	}
 	// .payment__top
 	&__top {
 		margin-bottom: 62px;
+		@media (max-width: 576px) {
+			margin-bottom: 50px;
+		}
+		@media (max-width: 420px) {
+			margin-bottom: 35px;
+		}
 	}
 	// .payment__grid
 	&__grid {
@@ -15,6 +27,9 @@
 		grid-column-gap: 50px;
 		grid-row-gap: 40px;
 		justify-content: center;
+		@media (max-width: 420px) {
+			grid-row-gap: 30px;
+		}
 	}
 	// .payment__column
 	&__column {
@@ -36,6 +51,10 @@
 		img {
 			max-width: 80px;
 			max-height: 80px;
+			@media (max-width: 420px) {
+				max-width: 50px;
+				max-height: 50px;
+			}
 		}
 	}
 	// .item-payment__title

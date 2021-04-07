@@ -23,10 +23,15 @@
 		font-style: normal;
 		font-weight: 800;
 		font-size: 60px;
-		line-height: 73px;
+		line-height: lh(73, 60);
 		text-align: center;
 		color: #ffffff;
 		position: relative;
+		@media (max-width: 1250px) {
+			@include adaptiv(margin-top, 160, 40, 1250, 320);
+			@include adaptiv(margin-bottom, 94, 50, 1250, 320);
+			@include adaptiv(font-size, 60, 22, 1250, 320);
+		}
 
 		span {
 			position: relative;
@@ -39,6 +44,12 @@
 				height: 1px;
 				width: 154px;
 				background: #a82420;
+				@media (max-width: 1250px) {
+					width: 90px;
+				}
+				@media (max-width: 993px) {
+					display: none;
+				}
 			}
 			&::before {
 				margin-right: 40px;
@@ -55,7 +66,7 @@
 		margin-bottom: 193px;
 		width: 251px;
 		min-height: 66px;
-		font-weight: bold;
+		font-weight: 700;
 		font-size: 16px;
 		line-height: lh(19, 16);
 		text-align: center;
@@ -69,6 +80,30 @@
 		&:hover {
 			background-color: #d74f4b;
 		}
+		@media (max-width: 1250px) {
+			@include adaptiv(margin-bottom, 193, 50, 1250, 769);
+		}
+		@media (max-width: 993px) {
+			min-height: 55px;
+			font-size: 15px;
+		}
+		@media (max-width: 768px) {
+			margin-bottom: 0;
+			width: 210px;
+			min-height: 50px;
+		}
+		@media (max-width: 576px) {
+			margin-bottom: 0;
+			width: 200px;
+			min-height: 45px;
+			font-size: 14px;
+		}
+		@media (max-width: 420px) {
+			margin-bottom: 0;
+			width: 200px;
+			min-height: 45px;
+			font-size: 14px;
+		}
 	}
 }
 
@@ -81,8 +116,9 @@
 	position: relative;
 	width: 35px;
 	height: 57px;
-	// bottom: 46px;
-	// left: 50%;
+	@media (max-width: 768px) {
+		display: none;
+	}
 
 	span {
 		height: 10px;

@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 	objectFitImages();
+	AOS.init()
 
 	const slidersTabs = document.querySelectorAll('.tabs-materials__slider');
 
@@ -23,21 +24,27 @@ $(document).ready(function () {
 				el: el.nextElementSibling.querySelector('.control-tabs__pagination'),
 				type: 'bullets',
 			},
-			// breakpoints: {
-			// 	320: {
-			// 		slidesPerView: 1,
-			// 	},
-			// 	653: {
-			// 		slidesPerView: 2,
-			// 	},
-			// 	1130: {
-			// 		slidesPerView: 3,
-			// 	},
-			// 	1340: {
-			// 		slidesPerView: 4,
-			// 		spaceBetween: 30,
-			// 	}
-			// }
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				375: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				450: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				630: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				900: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				}
+			}
 		});
 	})
 
@@ -68,21 +75,23 @@ $(document).ready(function () {
 			el: '.choose__pagination',
 			type: 'bullets',
 		},
-		// breakpoints: {
-		// 	320: {
-		// 		slidesPerView: 1,
-		// 	},
-		// 	653: {
-		// 		slidesPerView: 2,
-		// 	},
-		// 	1130: {
-		// 		slidesPerView: 3,
-		// 	},
-		// 	1340: {
-		// 		slidesPerView: 4,
-		// 		spaceBetween: 30,
-		// 	}
-		// }
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			600: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			993: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1300: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			}
+		}
 	});
 
 
