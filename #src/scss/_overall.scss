@@ -195,7 +195,7 @@ input[type="submit"] {
 		position: relative;
 		z-index: 1;
 		@media (max-width: 993px) {
-			@include adaptiv(font-size, 16, 12, 993, 320);
+			@include adaptiv(font-size, 16, 14, 993, 320);
 		}
 	}
 	// .title-block__bg
@@ -229,6 +229,11 @@ input[type="submit"] {
 			display: none;
 		}
 	}
+}
+
+.swiper-pagination-lock,
+.swiper-button-lock {
+	display: none !important;
 }
 
 // Анимации

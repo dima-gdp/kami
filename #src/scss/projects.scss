@@ -90,7 +90,7 @@
 			right: 0;
 			height: 100%;
 			width: 45px;
-			background: url("../img/tra.png") 50% 50% / cover no-repeat;
+			background: url("../img/tra.png") 50% 50% / 100% 100% no-repeat;
 			z-index: 2;
 		}
 		img {
@@ -231,6 +231,9 @@
 		@media (max-width: 830px) {
 			min-height: 45px;
 			max-width: 240px;
+		}
+		@media (max-width: 768px) {
+			margin: 0 auto;
 		}
 		@media (max-width: 420px) {
 			min-height: 40px;

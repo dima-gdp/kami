@@ -1,7 +1,10 @@
 $(document).ready(function () {
 
 	objectFitImages();
-	AOS.init()
+	AOS.init({
+		once: true,
+		startEvent: 'load'
+	})
 
 	const slidersTabs = document.querySelectorAll('.tabs-materials__slider');
 

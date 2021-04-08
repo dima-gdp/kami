@@ -31,9 +31,39 @@
 		@media (max-width: 740px) {
 			font-size: 15px;
 		}
-		p {
-			&:not(:last-child) {
-				margin-bottom: 10px;
+		p,
+		ol,
+		ul {
+			margin-bottom: 10px;
+		}
+
+		ul li {
+			position: relative;
+			padding-left: 20px;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0.75em;
+				left: 0;
+				width: 10px;
+				height: 1px;
+				background-color: #fff;
+			}
+		}
+		ol {
+			counter-reset: type;
+			list-style-type: none;
+			li {
+				position: relative;
+				padding-left: 30px;
+			}
+			li::before {
+				counter-increment: type;
+				content: counter(type) ".";
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: #fff;
 			}
 		}
 	}
