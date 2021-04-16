@@ -13,7 +13,7 @@
 	// .hero__title
 	&__title {
 		margin-top: 160px;
-		margin-bottom: 94px;
+		margin-bottom: 200px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -29,7 +29,7 @@
 		position: relative;
 		@media (max-width: 1250px) {
 			@include adaptiv(margin-top, 160, 40, 1250, 320);
-			@include adaptiv(margin-bottom, 94, 50, 1250, 320);
+			@include adaptiv(margin-bottom, 150, 40, 1250, 320);
 			@include adaptiv(font-size, 60, 22, 1250, 320);
 		}
 
@@ -77,6 +77,7 @@
 		box-sizing: border-box;
 		cursor: pointer;
 		transition: 0.3s;
+		display: none;
 		&:hover {
 			background-color: #d74f4b;
 		}
@@ -122,14 +123,14 @@
 
 	span {
 		height: 10px;
-		width: 3px;
+		width: 2px;
 		position: absolute;
 		z-index: 999;
 		display: block;
 		background-color: #fff;
 		left: 50%;
-		-webkit-transform: translate(-0.5px);
-		transform: translate(-0.5px);
+		-webkit-transform: translate(-1px, 0);
+		transform: translate(-1px, 0);
 		animation: mouse-wheel 1s linear infinite;
 		-webkit-animation: mouse-wheel 1s linear infinite;
 		-moz-animation: mouse-wheel 1s linear infinite;
